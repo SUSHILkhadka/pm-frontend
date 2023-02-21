@@ -30,8 +30,8 @@ const LoginForm = () => {
   const formRef = useRef<any>();
   const [formError, setFormError] = useState({});
   const [formValue, setFormValue] = useState({
-    email: "",
-    password: "ff"
+    email: "email of change",
+    password: "change"
   });
 
   const handleSubmit = () => {

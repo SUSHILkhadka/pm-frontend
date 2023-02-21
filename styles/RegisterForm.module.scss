@@ -1,0 +1,35 @@
+.w-100 {
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+
+.form-register {
+  background-color: black;
+}
+
+.input-icon {
+  color: blue;
+}
+.input-icon-wrapper {
+  padding-top: 18px !important;
+}
+.input {
+  caret-color: blue;
+  background-color: black;
+  height: 52px;
+  border: 1px solid rgb(207, 201, 201);
+  color: white;
+  align-items: center;
+  display: flex;
+}
+
+.input-label {
+  color: white;
+}
+
+.eyeIcon {
+  background-color: black !important;
+  padding-top: 25px !important;
+}

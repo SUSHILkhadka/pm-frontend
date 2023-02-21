@@ -2,35 +2,48 @@ import LoginForm from "@/components/form/loginForm";
 import RegisterForm from "@/components/form/registerForm";
 import { Button, Loader } from "rsuite";
 import { useRouter } from "next/router";
+import styles from "@/styles/Login.module.scss";
 
 const Register = () => {
-  const router = useRouter()
+  const router = useRouter();
   const handleGoToLogin = () => {
     console.log("going to login");
-    router.replace('/login')
+    router.replace("/login");
   };
   return (
-    <div style={{ width: "100%", display: "flex" ,background:'grey'}}>
+    <div
+      className={`${styles["w-100"]} ${styles.flex} ${styles["page-login"]}`}
+    >
       <div
         style={{
           width: "50%",
           display: "flex",
-          justifyContent: "center",
-          border: "2px solid pink"
+          justifyContent: "center"
         }}
       >
         <div
           style={{
-            width: "75%",
-            border: "2px solid red"
+            width: "75%"
           }}
         >
           <h1>Sign Up</h1>
-          <RegisterForm />
-          <Button onClick={handleGoToLogin}>Already has an account? Sign in</Button>
+          <RegisterForm isRegisterForm={true} />
+          <div
+            className={`${styles["changepage-div"]}`}
+            onClick={handleGoToLogin}
+          >
+            Already has an account? Sign in
+          </div>
         </div>
       </div>
-      <Loader size="lg" />
+      <div className={styles.parentImageContainer}>
+        <div>
+          <img
+            alt="loading"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjm8kaOLaAPWSD-lpafTh1WRzqS8MB58xK-A&usqp=CAU"
+          ></img>
+        </div>
+      </div>
     </div>
   );
 };

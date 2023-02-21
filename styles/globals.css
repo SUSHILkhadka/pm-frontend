@@ -1,9 +1,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -86,13 +86,15 @@ body {
 }
 
 body {
+  background-color: #f6f8f9 !important;
+  /* background-color: #1d526d !important; */
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 a {
@@ -104,4 +106,368 @@ a {
   html {
     color-scheme: dark;
   }
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid {
+  display: grid;
+}
+.gap-8 {
+  gap: 14px;
+}
+.center {
+  width: 100%;
+  justify-content: center;
+  justify-self: center;
+}
+.center-80 {
+  margin: 30px;
+  width: 60%;
+  justify-self: center !important;
+}
+.flex-row {
+  flex-direction: row;
+}
+.align-center {
+  align-items: center;
+}
+.justify-right {
+  justify-self: right;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.m-12 {
+  margin: 12px;
+}
+.justify-right {
+  justify-content: right;
+}
+.width-60p {
+  width: 60%;
+}
+.width-100p {
+  width: 100%;
+}
+.projectname {
+  font-weight: 700;
+  font-size: 20px;
+  color: #333;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    sans-serif;
+}
+.projectcount {
+  font-size: 0.625rem;
+  color: #737373;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    sans-serif;
+}
+.flex-column {
+  flex-direction: column;
+}
+.tableClass {
+  width: 100%;
+  border-top: 1px solid #d9d9d9;
+}
+.f-20 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  /* border-bottom: 1px solid #d9d9d9; */
+}
+.searchbar {
+  width: 50%;
+  /* min-width: 40px; */
+}
+
+/* pagination */
+
+.table__pagination {
+  background-color: #fff;
+  border-top: 1px solid #f6f6f6;
+  padding: 10px;
+}
+.bottomBorder {
+  border-bottom: 3px solid red;
+}
+.lf-table__pagination-dropdown {
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+  color: #999;
+  padding: 0.5rem;
+  border-radius: 2px;
+  background: #ffffff;
+  border: 1px solid #d2d2d2;
+  box-sizing: border-box;
+  height: 35px;
+  font-weight: 600;
+}
+.lf-table__pagination-btn {
+  font-size: 0.875rem !important;
+  outline: none !important;
+  cursor: pointer !important;
+  color: #999 !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 2px !important;
+  background: #ffffff !important;
+  border: 1px solid #d2d2d2 !important;
+  margin-right: 0.5rem !important;
+  line-height: normal !important;
+  font-weight: 600 !important;
+}
+.lf-table__pagination-btn:hover {
+  background-color: #999 !important;
+  border: 1px solid #999999 !important;
+  color: #fff !important;
+}
+
+.lf-table__pagination-btn--active {
+  background: #29b6f6 !important;
+  color: #fff !important;
+  border-color: #29b6f6 !important;
+  font-weight: 700 !important;
+}
+.lf-table__pagination-btn--active:hover {
+  color: #fff !important;
+  border-color: #29b6f6 !important;
+  background-color: #2196f3 !important;
+  border: 1px solid #2196f3 !important;
+}
+.lf-table__pagination-btn--disabled {
+  background: #d2d2d2 !important;
+  color: #fff !important;
+  border-color: #d2d2d2 !important;
+  cursor: not-allowed !important;
+}
+.lf-table__pagination-btn--disabled:hover {
+  background: #d2d2d2 !important;
+  color: #fff !important;
+  border-color: #d2d2d2 !important;
+  cursor: not-allowed !important;
+}
+.lf-table__pagination-dropdown-option {
+  padding: 0.5rem 1rem !important;
+}
+.lf-table__pagination-status {
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  color: #737373;
+}
+
+/* button */
+.btn--outlined-grey:disabled {
+  background-color: #fff0;
+  color: #d2d2d2;
+}
+.btn--outlined-grey {
+  border-color: #999;
+  color: #999;
+}
+.btn {
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 2px;
+}
+.table__header {
+  background-color: #fff;
+  border-radius: 4px 4px 0 0;
+  padding: 8px 16px;
+}
+.border-icon {
+  background-color: #fff;
+  border: 1px solid #b2b2b2 !important;
+  padding: 4px 8px;
+}
+
+.lf-table__head-row {
+  border-top: 2px solid #e6e6e6;
+  border-bottom: 2px solid #e6e6e6;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 4px 4px 0 0;
+  padding: 10px 16px;
+  justify-content: space-between;
+}
+.plus-icon {
+  cursor: pointer;
+  color: #29b6f6;
+  position: absolute;
+}
+.dropdown-button__label {
+  background: none;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #29b6f6;
+}
+.mr-2x {
+  margin-left: 26px !important;
+}
+.mr-1x {
+  margin-left: 14px !important;
+}
+.bg-white {
+  background-color: white;
+}
+.btn--primary {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+/* timeline */
+.align-items-center {
+  align-items: center;
+}
+.d-flex {
+  display: flex !important;
+}
+
+.timeline__start-date,
+.timeline__end-date {
+  max-width: 100px;
+  min-width: 100px;
+}
+.timeline__outline {
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  height: 4px;
+  margin-right: 16px;
+  width: 118px;
+}
+.timeline__progress {
+  background-color: #4fc3f7;
+  border-radius: 4px;
+  height: 4px;
+}
+.avatar {
+  display: flex;
+  align-items: center;
+}
+.avatar a {
+  color: #29b6f6;
+  margin-left: 8px;
+}
+.avatar a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+.avatar-table {
+  width: 28px;
+  height: 28px;
+  background: #f5f5f5;
+  border-radius: 60px;
+  overflow: hidden;
+}
+.avatar-table-img {
+  width: 100%;
+}
+
+.project-avatar {
+  display: flex;
+  align-items: center;
+}
+.project-avatar span {
+  margin-left: 10px;
+}
+.project-avatar-table {
+  width: 28px;
+  height: 28px;
+  background: #f5f5f5;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.project-avatar-table-img {
+  width: 100%;
+  padding: 4px;
+}
+
+.project-status {
+  display: flex;
+  align-items: center;
+}
+.project-status span {
+  margin-left: 10px;
+}
+.project-status-table {
+  width: 12px;
+  height: 12px;
+  background: red;
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+.project-status-table-div {
+  width: 20px;
+  border-radius: 200px;
+
+  padding: 4px;
+}
+.filter-input-container {
+  align-items: flex-end;
+  background-color: #f6f8f9 !important;
+  padding: 4px 8px;
+}
+.filter-input {
+  font-size: 10px;
+}
+.filter-input-tagpicker {
+  font-size: 10px !important;
+  border: 1px solid transparent !important;
+}
+
+/**replacing class from rsuite.css*/
+.rs-picker-input.rs-picker-tag .rs-picker-toggle.rs-btn {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  box-shadow: none;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.rs-table-cell {
+  border-bottom: 2px solid white !important;
+}
+.rs-table-cell-header .rs-table-cell {
+  border-bottom: 4px solid #f6f8f9 !important;
+  border-top: 2px solid #f6f8f9 !important;
+}
+
+.rs-table-cell-group-shadow,
+.rs-table-cell-group-left-shadow {
+  box-shadow: 0px 0 0px rgba(9, 9, 9, 0.08) !important/* rtl:ignore */;
+  box-shadow: 0px 0 0px var(--rs-table-shadow) !important/* rtl:ignore */;
+}
+
+/* .rs-input-group.rs-input-group-inside .rs-input-group-addon {
+  padding: 18px 13px ;
+} */
+
+.rs-picker-has-value .rs-btn .rs-picker-toggle-value,
+.rs-picker-has-value .rs-picker-toggle .rs-picker-toggle-value {
+  color: #737373 !important;
+}
+.rs-picker-value-count {
+  color: #737373 !important;
+
+  background-color: transparent !important;
+}
+
+.filter-input-tagpicker
+  .rs-picker-has-value.rs-picker-cleanable
+  .rs-picker-toggle.rs-btn {
+  background-color: #737373 !important;
+}
+.rs-picker-has-valuec.rs-picker-cleanable.rs-picker-toggle.rs-btn {
+  padding-right: 32px;
+}
+.rs-picker-toggle {
+  background-color: #737373 !important;
+}
+
+.rs-picker-default .rs-picker-toggle.rs-btn {
+  background-color: #f6f8f9 !important;
 }
